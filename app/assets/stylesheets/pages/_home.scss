@@ -1,1 +1,62 @@
-// Specific CSS for your home-page
+.banner {
+  background-image: url("banner.jpg");
+  height: 80vh;
+  background-size: cover;
+  margin-bottom: 5vh;
+
+  h1 {
+    font-family: "Roboto", "Helvetica", "sans-serif";
+    color: $light-gray;
+    text-shadow: 1px 1px 1px rgb(98, 97, 97);
+  }
+}
+
+.banner-title {
+  font-size: 8vh;
+  padding-top: 8vh;
+}
+
+.bg-light-green {
+  background-color: rgba($color: $green, $alpha: 0.2);
+}
+
+.btw-img-text {
+  min-height: 40vh;
+}
+
+.home-imgs {
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+
+.landscape-1 {
+  background-image: url('IMG_6149.png');
+}
+.landscape-2 {
+  background-image: url('IMG_4461.jpeg');
+}
+.balisage-1 {
+  background-image: url('balisage-pedestre-02.jpeg');
+}
+.balisage-2 {
+  background-image: url('balisage-pedestre-03.jpeg');
+}
+
+.psy-card {
+  min-height: 60vh;
+  padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(min-width: 768px) {
+  .home-text {
+    width: 60%;
+  }
+
+  .psy-card {
+    margin: 0 auto;
+  }
+}

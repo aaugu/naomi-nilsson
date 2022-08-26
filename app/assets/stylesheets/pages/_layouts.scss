@@ -1,0 +1,174 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+}
+
+html, body {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100vh;
+	position: relative;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+h1, h2 {
+	color: $green;
+}
+
+.content {
+	padding-bottom: 18vh;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.general-container {
+	padding-top: 15vh;
+	padding-bottom: 5vh;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	max-width: 100%;
+}
+
+.header {
+	margin: 0 auto;
+	width: 80%;
+  display: flex;
+	align-items: center;
+	margin-bottom: 5vh;
+
+  div {
+    display: none;
+  }
+
+	h1 {
+		margin: 0 auto;
+	}
+}
+
+.subheader {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+
+  div {
+    display: none;
+  }
+
+  h2 {
+    margin: 0 auto;
+  }
+}
+
+
+.size-highlight {
+	font-size: 1.1rem;
+}
+
+.content-container {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	margin-bottom: 5vh;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+@media(min-width: 500px) {
+  .header h1 {
+    margin: 0 2vw;
+  }
+
+  .header div {
+    display: block;
+    flex-grow: 1;
+    background-color: $green;
+    height: 1px;
+  }
+}
+
+@media(min-width: 650px) {
+  .subheader {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .subheader h2 {
+    margin: 0 2vw;
+  }
+
+  .subheader div {
+    display: block;
+    flex-grow: 1;
+    background-color: $green;
+    height: 1px;
+  }
+}
+
+
+@media(min-width: 993px) {
+  .xs-hidden {
+    display: block;
+  }
+
+  .header h2 {
+    margin: 0 2vw;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+}
+
+@media(max-width: 992px) {
+  .xs-hidden {
+    display: none;
+  }
+
+  .lg-hidden {
+    display: block;
+  }
+}
+
+@media(min-width: 1400px) {
+  .content-container {
+    max-width: 1200px;
+  }
+}
