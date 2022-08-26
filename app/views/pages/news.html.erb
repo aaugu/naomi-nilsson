@@ -17,19 +17,21 @@
     <%= link_to '<i class="fa-solid fa-file-pdf"></i>'.html_safe, asset_path("ordonnance_psychologie_psychotherapie.pdf", format: :pdf), target: "_blank", class: "pdf-logo" %>
   </p>
 
-  <div class="subheader">
-    <div></div>
-    <h2 class="text-center">ACTUALITÉS</h2>
-    <div></div>
-  </div>
+  <% if @posts.count > 0 %>
+    <div class="subheader">
+      <div></div>
+      <h2 class="text-center">ACTUALITÉS</h2>
+      <div></div>
+    </div>
 
-  <div class="content-container">
-    <% @posts.each do |post| %>
-      <div class="container w-75 mb-5">
-        <p><%= post.title.upcase %></p>
-        <p><%= post.content %></p>
-        <%= link_to "Lien vers l'article", post.url %></p>
-      </div>
-    <% end %>
-  </div>
+    <div class="content-container">
+      <% @posts.each do |post| %>
+        <div class="container w-75 mb-5">
+          <p><%= post.title.upcase %></p>
+          <p><%= post.content %></p>
+          <%= link_to "Lien vers l'article", post.url %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>

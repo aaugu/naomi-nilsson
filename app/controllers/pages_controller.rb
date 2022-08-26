@@ -11,6 +11,6 @@ class PagesController < ApplicationController
 	end
 
   def news
-    # @posts = Post.all
+    @posts = Post.all
   end
 end
