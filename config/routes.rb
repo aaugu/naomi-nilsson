@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'dashboard', to: 'dashboard#index', as: :user_root
 
 	root to: 'pages#home'
 	get 'about', to: 'pages#about'
