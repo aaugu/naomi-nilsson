@@ -36,11 +36,6 @@ a.active, a:hover {
   transition: .5s;
 }
 
-a:hover:last-child {
-  color: $blue;
-  transition: .5s;
-}
-
 .checkbtn {
   display: flex;
   align-items: center;
@@ -80,6 +75,11 @@ a:hover:last-child {
 	margin: 3vh 0;
 	line-height: 1.5;
   }
+
+    a.active, a:hover {
+      color: $deep-yellow;
+      transition: .5s;
+    }
 
   nav ul li a {
 	font-size: 20px;
