@@ -6,7 +6,7 @@
     color: $blue;
     background-color: $deep-yellow;
     border-radius: 10px;
-    padding: 1vh 1vw;
+    padding: 1vh 1.5vw;
     margin: 0 auto;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
     text-shadow: none;
@@ -30,4 +30,11 @@
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
   font-weight: 600;
+}
+
+.btn-cancel {
+  color: $light-gray;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  background: $light-green;
 }

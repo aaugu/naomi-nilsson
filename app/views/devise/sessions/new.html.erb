@@ -1,14 +1,15 @@
 <div class="general-container">
-<div class="header">
-  <div></div>
-  <%= image_tag "logo-titles.png", class: "logo-title" %>
-  <h1 class="text-center">SE CONNECTER</h1>
-  <%= image_tag "logo-titles.png", class: "logo-title"%>
-  <div></div>
-</div>
+  <div class="header">
+    <div></div>
+    <%= image_tag "logo-titles.png", class: "logo-title" %>
+    <h1 class="text-center">SE CONNECTER</h1>
+    <%= image_tag "logo-titles.png", class: "logo-title"%>
+    <div></div>
+  </div>
 
   <div class="forms-content m-auto">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
       <div class="form-inputs mb-5">
         <%= f.input :email,
                     required: false,
