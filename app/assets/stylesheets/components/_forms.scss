@@ -1,5 +1,9 @@
-.forms-container {
-  padding-top: 15vh;
-  padding-bottom: 22vh;
+.forms-content {
+  width: 75%;
+}
 
+@media(min-width: 768px) {
+  .forms-content {
+    width: 50%;
+  }
 }

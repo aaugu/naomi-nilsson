@@ -139,12 +139,17 @@ h1, h2 {
   }
 }
 
-
-@media(min-width: 993px) {
+@media(max-width: 992px) {
   .xs-hidden {
-    display: block;
+    display: none;
   }
 
+  .lg-hidden {
+    display: block;
+  }
+}
+
+@media(min-width: 993px) {
   .header h2 {
     margin: 0 2vw;
   }
@@ -154,14 +159,11 @@ h1, h2 {
   }
 }
 
-@media(max-width: 992px) {
+@media(min-width: 1091px) {
   .xs-hidden {
-    display: none;
+      display: block;
   }
 
-  .lg-hidden {
-    display: block;
-  }
 }
 
 @media(min-width: 1400px) {
