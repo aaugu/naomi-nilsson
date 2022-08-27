@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 	get 'about', to: 'pages#about'
 	get 'contact', to: 'pages#contact'
   get 'news', to: 'pages#news'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :posts, only:[:new, :create, :edit, :update, :destroy]
 end

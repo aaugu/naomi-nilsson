@@ -11,7 +11,21 @@
     text-shadow: none;
   }
 
+  a:hover {
+    color: $blue
+  }
+
   .bold {
     font-weight: 600;
   }
+}
+
+.form-btn {
+  color: $blue;
+  padding: 8px 24px;
+  border-radius: 10px;
+  background-color: $deep-yellow;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  font-weight: 600;
 }

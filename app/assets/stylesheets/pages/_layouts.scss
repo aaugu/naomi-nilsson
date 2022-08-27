@@ -2,9 +2,6 @@
 	box-sizing: border-box;
 }
 
-* {
-}
-
 html, body {
   text-decoration: none;
   list-style: none;
@@ -15,7 +12,6 @@ html, body {
 	min-height: 100vh;
 	position: relative;
 }
-
 
 a {
 	text-decoration: none;
@@ -43,6 +39,11 @@ h1, h2 {
 	color: $green;
 }
 
+.general-container {
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+}
+
 .content {
 	padding-bottom: 18vh;
 }
@@ -51,10 +52,6 @@ h1, h2 {
   margin-bottom: 0;
 }
 
-.general-container {
-	padding-top: 15vh;
-	padding-bottom: 5vh;
-}
 
 .sticky {
 	position: fixed;

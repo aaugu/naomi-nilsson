@@ -80,9 +80,9 @@ a.active, a:hover {
 	font-size: 20px;
   }
 
-  a:hover, a.active {
-	color: $deep-yellow;
-  }
+  // a:hover, a.active {
+	// color: $deep-yellow;
+  // }
 
   #check:checked~ul {
 	left: 0;
