@@ -28,8 +28,21 @@
   border: none;
 }
 
+@media(min-width: 576px) {
+  .sections {
+    padding: 0 6vw;
+  }
+}
+
+
 @media(min-width: 992px) {
   .sections {
-    padding: 0 8vw;
+    padding: 0 12vw;
+  }
+}
+
+@media(min-width: 1400px) {
+  .sections {
+    padding: 0 16vw;
   }
 }
