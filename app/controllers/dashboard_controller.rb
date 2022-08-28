@@ -9,7 +9,7 @@ class DashboardController < ApplicationController
 
   def is_admin?
     unless current_user.admin
-      flash[:notice] = "You are not authorized to perform this action blabla."
+      flash[:notice] = "You are not authorized to perform this action."
       redirect_to root_path
     end
   end
