@@ -8,8 +8,7 @@
   </div>
 
   <p class="justify-text w-75 mx-auto mb-4 change-justify-text">
-    A partir du premier juillet 2022, le modèle de la prescription est entré en vigueur, qui permet au suivi d’être remboursé par l’assurance de base sur prescription d’un médecin généraliste, psychiatre ou pédiatre.<br><br>
-    A priori cela ne devrait pas engendrer de changement pour les personnes qui passent par leur assurance complémentaire et souhaitent continuer de le faire.
+    <%= @paragraph_1 %><br><br><%= @paragraph_2 %>
   </p>
 
   <p class="justify-text w-75 mx-auto mb-5 change-justify-text">
@@ -24,7 +23,9 @@
     </div>
 
   <% if @posts.count == 0 %>
-    <p>A venir...</p>
+    <div class="w-50 m-auto">
+      <p>À venir...</p>
+    </div>
   <% else %>
     <div class="posts-container">
       <% @posts.each do |post| %>
