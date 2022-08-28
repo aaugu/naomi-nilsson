@@ -1,17 +1,70 @@
 <div class="general-container">
+  <div class="header pb-3">
+    <div></div>
+    <%= image_tag "logo-titles.png", class: "logo-title" %>
+    <h1 class="text-center">TABLEAU DE BORD</h1>
+    <%= image_tag "logo-titles.png", class: "logo-title"%>
+    <div></div>
+  </div>
 
-  <% if user_signed_in? %>
-    <%= button_to "Log out", destroy_user_session_path, method: :delete  %>
-  <% else %>
-    <%= link_to "Log in", new_user_session_path %>
-  <% end %>
+  <div class="container-fluid">
+    <div class="row sections">
+      <div class="col-12 col-md-6 m-auto mb-5">
+        <div class="section-card w-100">
+          <div class="subheader w-100">
+            <div></div>
+            <h2 class="text-center">CONTACT</h2>
+            <div></div>
+          </div>
 
-  <%= link_to "New post", new_post_path %>
+          <div class="size-highlight">
+            <p><i class="fa-solid fa-angle-right"></i> Horaires &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p><i class="fa-solid fa-angle-right"></i> Disponibilités &nbsp<i class="fa-solid fa-pen"></i></p>
+          </div>
+        </div>
+      </div>
 
-  <ul>
-    <% @posts.each do |post| %>
-      <li><%= link_to post.title, post_path(post) %></li>
-    <% end %>
-  </ul>
+      <div class="col-12 col-md-6 m-auto mb-5">
+        <div class="section-card w-100">
+          <div class="subheader w-100">
+            <div></div>
+            <h2 class="text-center">INFORMATIONS</h2>
+            <div></div>
+          </div>
+
+          <div class="size-highlight">
+            <p><i class="fa-solid fa-angle-right"></i> Paragraphe 1 &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p><i class="fa-solid fa-angle-right"></i> Paragraphe 2 &nbsp<i class="fa-solid fa-pen"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row sections">
+      <div class="col-12 m-auto mb-5">
+        <div class="section-card w-100">
+          <div class="subheader w-100">
+            <div></div>
+            <h2 class="text-center">POSTS</h2>
+            <div></div>
+          </div>
+
+          <p class="size-highlight mb-4"><%= link_to "Créer un nouveau post", new_post_path, class: "dashboard-btn" %></p>
+
+          <div class="size-highlight">
+            <% @posts.each do |post| %>
+              <p><i class="fa-solid fa-angle-right"></i> <%= post.title %>&#8239 &nbsp<i class="fa-solid fa-pen"></i>&#8239 &nbsp<i class="fa-solid fa-trash-can"></i></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <p><%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dashboard-btn log-out-btn" %></p>
+    </div>
+  </div>
+
+
+
+
+
 
 </div>
