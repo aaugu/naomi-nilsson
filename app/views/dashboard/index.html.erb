@@ -72,9 +72,12 @@
               <div class="d-flex">
                 <p class="mb-2">
                   <i class="fa-solid fa-angle-right"></i> <%= post.title.upcase %>&nbsp
-                  <%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_post_path(post) %>&nbsp&nbsp
                 </p>
-                <%= button_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, post, method: :delete, class: "delete-btn", data: { controller:  "confirmation", "message-value": "Vous allez supprimer #{post.title}, êtes vous sûre ?", action: "submit->confirmation#confirm" } %>
+                <div class="d-flex">
+                  &nbsp&nbsp
+                  <%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_post_path(post) %>&nbsp&nbsp
+                  <%= button_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, post, method: :delete, class: "delete-btn", data: { controller:  "confirmation", "message-value": "Vous allez supprimer #{post.title}, êtes vous sûre ?", action: "submit->confirmation#confirm" } %>
+                </div>
               </div>
             <% end %>
           </div>
