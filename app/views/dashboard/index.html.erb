@@ -58,13 +58,13 @@
                   <i class="fa-solid fa-angle-right"></i> <%= post.title.upcase %>&nbsp
                   <%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_post_path(post) %>&nbsp&nbsp
                 </p>
-                <%= button_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, post, method: :delete, form: { data: { turbo_confirm: "Vous allez supprimer #{post.title}, êtes vous sûre ?" } }, class: "delete-btn"  %>
+                <%= button_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, post, method: :delete, class: "delete-btn", data: { controller:  "confirmation", "message-value": "Vous allez supprimer #{post.title}, êtes vous sûre ?", action: "submit->confirmation#confirm" } %>
               </div>
             <% end %>
           </div>
         </div>
       </div>
-    <p><%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dashboard-btn log-out-btn" %></p>
+    <p><%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class: "dashboard-btn log-out-btn" %></p>
     </div>
   </div>
 
