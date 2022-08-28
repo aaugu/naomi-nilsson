@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
   before_action :is_admin?
 
-  def index
-    @posts = Post.all
+  def show
+    redirect_to dashboard_path, status: :see_other
   end
 
   def new
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, status: :see_other
+    redirect_to dashboard_path, status: :see_other
   end
 
   private

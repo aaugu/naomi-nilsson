@@ -30,6 +30,7 @@
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
   font-weight: 600;
+  border: none;
 }
 
 .btn-cancel {
@@ -37,4 +38,32 @@
   padding: 1vh 1vw;
   border-radius: 10px;
   background: $light-green;
+}
+
+.dashboard-btn {
+  background-color: $deep-yellow;
+  padding: 1vh 2vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5vh;
+  font-weight: bold;
+  color: $blue;
+}
+
+.dashboard-btn:hover {
+  color: $blue;
+}
+
+.log-out-btn {
+  float: right;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.delete-btn {
+  color: $blue;
+  border: none;
+  background-color: $light-gray;
+  padding: 0;
+  margin: 0;
 }

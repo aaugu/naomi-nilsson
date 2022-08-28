@@ -18,8 +18,8 @@
           </div>
 
           <div class="size-highlight">
-            <p><i class="fa-solid fa-angle-right"></i> Horaires &nbsp<i class="fa-solid fa-pen"></i></p>
-            <p><i class="fa-solid fa-angle-right"></i> Disponibilités &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p class="mb-2"><i class="fa-solid fa-angle-right"></i> Horaires &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p class="mb-2"><i class="fa-solid fa-angle-right"></i> Disponibilités &nbsp<i class="fa-solid fa-pen"></i></p>
           </div>
         </div>
       </div>
@@ -33,8 +33,8 @@
           </div>
 
           <div class="size-highlight">
-            <p><i class="fa-solid fa-angle-right"></i> Paragraphe 1 &nbsp<i class="fa-solid fa-pen"></i></p>
-            <p><i class="fa-solid fa-angle-right"></i> Paragraphe 2 &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p class="mb-2"><i class="fa-solid fa-angle-right"></i> Paragraphe 1 &nbsp<i class="fa-solid fa-pen"></i></p>
+            <p class="mb-2"><i class="fa-solid fa-angle-right"></i> Paragraphe 2 &nbsp<i class="fa-solid fa-pen"></i></p>
           </div>
         </div>
       </div>
@@ -53,7 +53,13 @@
 
           <div class="size-highlight">
             <% @posts.each do |post| %>
-              <p><i class="fa-solid fa-angle-right"></i> <%= post.title.upcase %>&#8239 &nbsp<i class="fa-solid fa-pen"></i>&#8239 &nbsp<i class="fa-solid fa-trash-can"></i></p>
+              <div class="d-flex">
+                <p class="mb-2">
+                  <i class="fa-solid fa-angle-right"></i> <%= post.title.upcase %>&nbsp
+                  <%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_post_path(post) %>&nbsp&nbsp
+                </p>
+                <%= button_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, post, method: :delete, form: { data: { turbo_confirm: "Vous allez supprimer #{post.title}, êtes vous sûre ?" } }, class: "delete-btn"  %>
+              </div>
             <% end %>
           </div>
         </div>

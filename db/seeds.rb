@@ -4,7 +4,7 @@
 puts "Cleaning database..."
 Post.destroy_all
 # User.destroy_all
-Information.destroy_all
+# Information.destroy_all
 
 # puts "Creating users..."
 # admin = User.create(email: "admin@email.ch", password: "123456")
@@ -21,15 +21,15 @@ post_2 = {title: "TARTE SALÉE DU PETIT DÉJEUNER ALIAS « BREAKFAST GALETTE » 
   puts "Created #{post.title}"
 end
 
-puts "Creating informations..."
-information_1 = {page: "Contact", name: "Horaires", content: "Je travaille actuellement les lundis, jeudis et vendredis de 8h15 à 17h30.", user: User.where(admin: true).first}
-information_2 =  {page: "Contact", name: "Disponibilités", content: "Dans l’immédiat (actualisé en août 2022) je n’ai pas de disponibilité pour de nouveaux suivis, mais il est toujours possible de me faire une demande par mail et que je vous contacte lorsqu’une place se libère.", user: User.where(admin: true).first}
-information_3 = {page: "Actualités", name: "Paragraphe 1", content: "A partir du premier juillet 2022, le modèle de la prescription est entré en vigueur, qui permet au suivi d’être remboursé par l’assurance de base sur prescription d’un médecin généraliste, psychiatre ou pédiatre.", user: User.where(admin: true).first}
-information_4 = {page: "Actualités", name: "Paragraphe 2", content: "A priori cela ne devrait pas engendrer de changement pour les personnes qui passent par leur assurance complémentaire et souhaitent continuer de le faire.", user: User.where(admin: true).first}
+# puts "Creating informations..."
+# information_1 = {page: "Contact", name: "Horaires", content: "Je travaille actuellement les lundis, jeudis et vendredis de 8h15 à 17h30.", user: User.where(admin: true).first}
+# information_2 =  {page: "Contact", name: "Disponibilités", content: "Dans l’immédiat (actualisé en août 2022) je n’ai pas de disponibilité pour de nouveaux suivis, mais il est toujours possible de me faire une demande par mail et que je vous contacte lorsqu’une place se libère.", user: User.where(admin: true).first}
+# information_3 = {page: "Actualités", name: "Paragraphe 1", content: "A partir du premier juillet 2022, le modèle de la prescription est entré en vigueur, qui permet au suivi d’être remboursé par l’assurance de base sur prescription d’un médecin généraliste, psychiatre ou pédiatre.", user: User.where(admin: true).first}
+# information_4 = {page: "Actualités", name: "Paragraphe 2", content: "A priori cela ne devrait pas engendrer de changement pour les personnes qui passent par leur assurance complémentaire et souhaitent continuer de le faire.", user: User.where(admin: true).first}
 
-[information_1, information_2, information_3, information_4].each do |attributes|
-  information = Information.create!(attributes)
-  puts "Created #{information.name}"
-end
+# [information_1, information_2, information_3, information_4].each do |attributes|
+#   information = Information.create!(attributes)
+#   puts "Created #{information.name}"
+# end
 
 puts "Finished!"
