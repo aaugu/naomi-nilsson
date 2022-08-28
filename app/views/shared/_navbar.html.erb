@@ -1,4 +1,4 @@
-<nav class="sticky bg-transparent" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+<nav class="sticky bg-green" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <input type="checkbox" id="check">
   <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
@@ -12,7 +12,7 @@
   </label>
   <ul class="">
     <li>
-      <%= link_to "Bienvenue", root_path, class: "active" %>
+      <%= link_to "Bienvenue", root_path %>
     </li>
     <li>
       <%= link_to "A propos", about_path %>
