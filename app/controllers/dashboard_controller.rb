@@ -3,10 +3,10 @@ class DashboardController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    @schedule = Information.where(name: "Horaires").first.content
-    @availability = Information.where(name: "Disponibilités").first.content
-    @paragraph_1 = Information.where(name: "Paragraphe 1").first.content
-    @paragraph_2 = Information.where(name: "Paragraphe 2").first.content
+    @schedule = Information.where(name: "Horaires").first
+    @availability = Information.where(name: "Disponibilités").first
+    @paragraph_1 = Information.where(name: "Paragraphe 1").first
+    @paragraph_2 = Information.where(name: "Paragraphe 2").first
   end
 
   def destroy

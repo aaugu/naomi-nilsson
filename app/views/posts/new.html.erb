@@ -13,10 +13,13 @@
       <%= f.input :title,
                   label: "Titre" %>
       <%= f.input :content,
-                  label: "Description" %>
+                  label: "Description",
+                  :input_html => {rows: 5} %>
       <%= f.input :url,
                   label: "Lien vers l'article" %>
-      <%= f.submit "Créer", class: "form-btn" %>
+      <div class="d-flex justify-content-center mt-5">
+        <%= f.submit "Créer", class: "form-btn" %>
+      </div>
     <% end %>
   </div>
 </div>
