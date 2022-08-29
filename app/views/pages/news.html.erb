@@ -11,12 +11,14 @@
     <%= @paragraph_1 %><br><br><%= @paragraph_2 %>
   </p>
 
-  <p class="justify-text w-75 mx-auto mb-5 change-justify-text">
-    Vous trouverez ici le modèle d’ordonnance à faire signer par votre médecin si vous souhaitez que votre suivi soit remboursé par la Lamal.&nbsp;
-    <%= link_to '<i class="fa-solid fa-file-pdf"></i>'.html_safe, asset_path("ordonnance_psychologie_psychotherapie.pdf", format: :pdf), target: "_blank", class: "pdf-logo" %>
+  <p class="justify-text w-75 m-auto change-justify-text">
+    Vous trouverez ici le modèle d’ordonnance à faire signer par votre médecin si vous souhaitez que votre suivi soit remboursé par la Lamal.
   </p>
+  <div class="text-center mt-3 mb-5">
+    <%= link_to '<i class="fa-solid fa-file-pdf"></i>'.html_safe, asset_path("ordonnance_psychologie_psychotherapie.pdf", format: :pdf), target: "_blank", class: "pdf-logo" %>
+  </div>
 
-    <div class="subheader">
+    <div class="subheader py-2">
       <div></div>
       <h2 class="text-center">ACTUALITÉS</h2>
       <div></div>
