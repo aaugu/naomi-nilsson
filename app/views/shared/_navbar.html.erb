@@ -1,27 +1,33 @@
-<nav class="sticky bg-green" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
-  <input type="checkbox" id="check">
-  <label for="check" class="checkbtn">
-    <i class="fas fa-bars"></i>
-  </label>
-  <label>
-    <%= link_to root_path do %>
-      <div class="logo d-flex align-items-center">
-        <%= image_tag "logo-psy.png" %>
-      </div>
-    <% end %>
-  </label>
-  <ul class="">
-    <li>
-      <%= link_to "Bienvenue", root_path %>
-    </li>
-    <li>
-      <%= link_to "A propos", about_path %>
-    </li>
-    <li>
-      <%= link_to "Infos & Actualités", news_path %>
-    </li>
-    <li class="nav-contact main-button">
-      <%= link_to "Contact", contact_path, class: "bold" %>
-    </li>
-  </ul>
-</nav>
+<% if current_page?('/') %>
+  <div class="navbar-main bg-transparent">
+    <nav class="sticky">
+<% else %>
+  <nav class="sticky bg-green">
+<% end %>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label>
+      <%= link_to root_path do %>
+        <div class="logo d-flex align-items-center">
+          <%= image_tag "logo-psy.png" %>
+        </div>
+      <% end %>
+    </label>
+    <ul class="">
+      <li>
+        <%= link_to "Bienvenue", root_path %>
+      </li>
+      <li>
+        <%= link_to "A propos", about_path %>
+      </li>
+      <li>
+        <%= link_to "Infos & Actualités", news_path %>
+      </li>
+      <li class="nav-contact main-button">
+        <%= link_to "Contact", contact_path, class: "bold" %>
+      </li>
+    </ul>
+  </nav>
+</div>
