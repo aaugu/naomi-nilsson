@@ -12,7 +12,8 @@
       <%= f.input :content,
                   label: "Contenu",
                   :input_html => {rows: 7} %>
-      <div class="d-flex justify-content-center mt-5">
+      <div class="d-flex justify-content-between align-items-center mt-5">
+        <%= link_to "Revenir en arrière", :back, class:'btn-cancel text-center' %>
         <%= f.submit "Modifier", class: "form-btn" %>
       </div>
     <% end %>

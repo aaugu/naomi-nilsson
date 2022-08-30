@@ -16,7 +16,8 @@
                   :input_html => {rows: 7} %>
       <%= f.input :url,
                   label: "Lien vers l'article" %>
-      <div class="d-flex justify-content-center mt-5">
+      <div class="d-flex justify-content-between align-items-center mt-5">
+        <%= link_to "Revenir en arrière", :back, class:'btn-cancel text-center' %>
         <%= f.submit "Créer", class: "form-btn" %>
       </div>
     <% end %>
