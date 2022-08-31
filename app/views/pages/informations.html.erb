@@ -20,7 +20,7 @@
 
     <div class="subheader py-2">
       <div></div>
-      <h2 class="text-center">ACTUALITÉS</h2>
+      <h2 class="text-center">RESSOURCES</h2>
       <div></div>
     </div>
 
@@ -36,7 +36,7 @@
             <%= image_tag "logo-post.png", class: "post-img " %>
             <p><em><%= post.created_at.strftime("%d %b %Y") %></em></p>
           </div>
-          <div>
+          <div class="flex-grow-1">
             <p class="post-card-header"><%= post.title.upcase %></p>
             <p class="post-date-xs"><em><%= post.created_at.strftime("%d %b %Y") %></em></p>
             <p class="justify-text mb-3"><%= post.content %></p>

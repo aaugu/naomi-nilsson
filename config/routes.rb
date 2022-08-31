@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 	root to: 'pages#home'
 	get 'about', to: 'pages#about'
 	get 'contact', to: 'pages#contact'
-  get 'news', to: 'pages#news'
+  get 'informations', to: 'pages#informations'
   resources :posts, only:[:show, :new, :create, :edit, :update, :destroy]
   resources :informations, only:[:edit, :update]
 end
